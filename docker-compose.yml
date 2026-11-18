@@ -7,7 +7,7 @@ services:
       POSTGRES_USER: ${POSTGRES_USER:-norte}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?falta POSTGRES_PASSWORD}
     volumes:
-      - pgdata:/var/lib/postgresql/data
+      - pgdata:/var/lib/postgresql
       - ./db/init:/docker-entrypoint-initdb.d:ro
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-norte} -d ${POSTGRES_DB:-norte_demo}"]
