@@ -1,0 +1,12 @@
+{
+  "name": "norte-propiedades",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Demo genérica de sitio + panel para inmobiliarias: Next.js 16, Fastify 5 y PostgreSQL 18.",
+  "scripts": {
+    "dev:api": "npm --prefix api run dev",
+    "dev:web": "npm --prefix web run dev",
+    "build": "npm --prefix api run build && npm --prefix web run build",
+    "smoke": "node scripts/smoke.mjs"
+  }
+}

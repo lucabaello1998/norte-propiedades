@@ -1,0 +1,52 @@
+services:
+  db:
+    image: postgres:18-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-norte_demo}
+      POSTGRES_USER: ${POSTGRES_USER:-norte}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?falta POSTGRES_PASSWORD}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./db/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-norte} -d ${POSTGRES_DB:-norte_demo}"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  api:
+    build: ./api
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      PORT: 3002
+      HOST: 0.0.0.0
+      DATABASE_URL: postgres://${POSTGRES_USER:-norte}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB:-norte_demo}
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - uploads:/data/uploads
+    ports:
+      - "127.0.0.1:3106:3002"
+
+  web:
+    build:
+      context: ./web
+      args:
+        API_URL: http://api:3002
+    restart: unless-stopped
+    environment:
+      API_URL: http://api:3002
+      PUBLIC_SITE_URL: ${PUBLIC_SITE_URL:-http://localhost:3105}
+      PORT: 3000
+      HOSTNAME: 0.0.0.0
+    depends_on:
+      - api
+    ports:
+      - "127.0.0.1:3105:3000"
+
+volumes:
+  pgdata:
+  uploads:
