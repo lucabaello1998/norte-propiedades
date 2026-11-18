@@ -8,6 +8,8 @@ WORKDIR /app
 ENV NEXT_TELEMETRY_DISABLED=1
 ARG API_URL=http://api:3002
 ENV API_URL=$API_URL
+ARG PUBLIC_SITE_URL=http://localhost:3105
+ENV PUBLIC_SITE_URL=$PUBLIC_SITE_URL
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 RUN npm run build

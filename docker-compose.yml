@@ -36,6 +36,7 @@ services:
       context: ./web
       args:
         API_URL: http://api:3002
+        PUBLIC_SITE_URL: ${PUBLIC_SITE_URL:-http://localhost:3105}
     restart: unless-stopped
     environment:
       API_URL: http://api:3002
