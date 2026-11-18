@@ -119,7 +119,17 @@ tailscale serve --bg --https=8446 http://127.0.0.1:3105
 2. **Colores y tipografía:** `web/src/app/globals.css` (bloque `@theme`).
 3. **Logo:** `web/src/components/logo.tsx` y `web/public/favicon.svg`.
 4. **Contenido:** `db/init/002_seed.sql` (propiedades y consultas de ejemplo) y los textos de `web/src/app/(site)/page.tsx`.
-5. **Admin:** credenciales en `.env`; el panel no se indexa (`robots` + metadata).
+5. **Admin:** credenciales en `.env`; el panel no se indexa (`robots` + metadata). El bloque de "Acceso de demostración" y los valores precargados están en `web/src/app/admin/login/page.tsx`: cambialo o quitalo para un cliente real.
+
+## Rendimiento medido
+
+Lighthouse mobile sobre el deploy de producción (Next.js standalone + Tailscale):
+
+| Performance | Accesibilidad | Best practices | SEO |
+|---|---|---|---|
+| **99** | **100** | **100** | **100** |
+
+LCP 2,2 s · CLS 0 · TBT 52 ms.
 
 ## Seguridad incluida
 
