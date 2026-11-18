@@ -71,7 +71,7 @@ export function AdminShell({ children }: { children: React.ReactNode }) {
         <Link href="/admin" className="px-2 py-2">
           <Logo className="text-cream" />
         </Link>
-        <p className="mt-6 px-2 text-[0.6rem] font-bold uppercase tracking-[0.22em] text-cream/40">
+        <p className="mt-6 px-2 text-[0.6rem] font-bold uppercase tracking-[0.22em] text-cream/60">
           Panel de gestión
         </p>
         <nav className="mt-3 flex flex-col gap-1">

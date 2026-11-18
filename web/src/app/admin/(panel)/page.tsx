@@ -83,11 +83,11 @@ export default function AdminDashboardPage() {
         </div>
         <div className="rounded-2xl border border-line bg-forest p-5 text-cream">
           <div className="flex items-center justify-between">
-            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-cream/55">Total consultas</p>
-            <MessageSquare size={17} className="text-cream/55" />
+            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-cream/70">Total consultas</p>
+            <MessageSquare size={17} className="text-cream/70" />
           </div>
           <p className="mt-3 font-display text-4xl">{leads.length}</p>
-          <p className="mt-1 text-xs text-cream/55">desde el inicio del demo</p>
+          <p className="mt-1 text-xs text-cream/70">desde el inicio del demo</p>
         </div>
       </div>
 

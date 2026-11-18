@@ -26,7 +26,7 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <p className="eyebrow text-cream/50">Explorar</p>
+            <p className="eyebrow text-cream/70">Explorar</p>
             <nav className="mt-4 flex flex-col gap-2.5 text-sm text-cream/80">
               <Link href="/propiedades" className="transition-colors hover:text-cream">
                 Todas las propiedades
@@ -44,7 +44,7 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <p className="eyebrow text-cream/50">Contacto</p>
+            <p className="eyebrow text-cream/70">Contacto</p>
             <div className="mt-4 space-y-3 text-sm text-cream/80">
               <a href={site.phoneHref} className="flex items-start gap-2.5 transition-colors hover:text-cream">
                 <Phone size={16} className="mt-0.5 shrink-0" />
@@ -58,7 +58,7 @@ export function SiteFooter() {
                 <MapPin size={16} className="mt-0.5 shrink-0" />
                 {site.address}
               </p>
-              <p className="text-xs leading-relaxed text-cream/55">{site.hours}</p>
+              <p className="text-xs leading-relaxed text-cream/70">{site.hours}</p>
             </div>
             <a
               href={whatsappLink("Hola, quiero hacer una consulta.")}
@@ -72,7 +72,7 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col gap-3 border-t border-cream/15 pt-6 text-xs text-cream/50 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-14 flex flex-col gap-3 border-t border-cream/15 pt-6 text-xs text-cream/65 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} Norte Propiedades. Todos los derechos reservados.</p>
           <p>Sitio de demostración · Propiedades y datos ficticios</p>
         </div>

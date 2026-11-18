@@ -49,7 +49,7 @@ export function SiteHeader() {
         }`}
       >
         <div className="container-page flex h-20 items-center justify-between gap-6">
-          <Link href="/" aria-label="Norte Propiedades — inicio" className="shrink-0">
+          <Link href="/" aria-label="Norte Propiedades" className="shrink-0">
             <Logo />
           </Link>
 

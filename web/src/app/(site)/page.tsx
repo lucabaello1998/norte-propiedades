@@ -71,7 +71,7 @@ export default async function HomePage() {
             primera visita hasta las llaves.
           </p>
 
-          <div className="mt-9 flex flex-wrap items-center gap-x-7 gap-y-3 text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-cream/55">
+          <div className="mt-9 flex flex-wrap items-center gap-x-7 gap-y-3 text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-cream/70">
             <span className="flex items-center gap-2">
               <ShieldCheck size={14} /> {site.years} años en la zona
             </span>
@@ -155,7 +155,7 @@ export default async function HomePage() {
                 >
                   <span>
                     <span className="font-display text-2xl tracking-tight">{barrio.neighborhood}</span>
-                    <span className="mt-1 block text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-muted transition-colors group-hover:text-cream/55">
+                    <span className="mt-1 block text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-muted transition-colors group-hover:text-cream/70">
                       {barrio.count} propiedad{barrio.count === 1 ? "" : "es"}
                     </span>
                   </span>
@@ -230,7 +230,7 @@ export default async function HomePage() {
               “Vendimos en tres semanas y con un acompañamiento que no esperábamos. Nos explicaron
               cada paso, sin apuro y sin letra chica.”
             </blockquote>
-            <p className="mt-6 text-xs font-semibold uppercase tracking-[0.16em] text-cream/55">
+            <p className="mt-6 text-xs font-semibold uppercase tracking-[0.16em] text-cream/70">
               Florencia y Martín · Castelar
             </p>
           </Reveal>
@@ -248,7 +248,7 @@ export default async function HomePage() {
         <div className="absolute inset-0 bg-ink/70" />
         <div className="container-page relative z-10 py-20 text-cream lg:py-28">
           <Reveal className="max-w-2xl">
-            <p className="eyebrow text-cream/55">Vendé o alquilá con nosotros</p>
+            <p className="eyebrow text-cream/70">Vendé o alquilá con nosotros</p>
             <h2 className="mt-3 text-balance text-4xl leading-[1.02] tracking-[-0.03em] sm:text-5xl">
               ¿Tenés una propiedad para vender o alquilar?
             </h2>
@@ -271,7 +271,7 @@ export default async function HomePage() {
                 <ArrowRight size={15} />
               </Link>
             </div>
-            <p className="mt-6 flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-cream/45">
+            <p className="mt-6 flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-cream/65">
               <MapPin size={13} /> {site.address} · {site.hours}
             </p>
           </Reveal>
